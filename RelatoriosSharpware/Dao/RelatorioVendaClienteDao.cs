@@ -42,6 +42,7 @@ namespace RelatoriosSharpware.Dao
 
             using (MySqlCommand cmd = new MySqlCommand(cmdText, _con))
             {
+                cmd.Connection.Open();
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@VENDA", id);
                 reader = cmd.ExecuteReader();
@@ -65,28 +66,46 @@ namespace RelatoriosSharpware.Dao
             reader.Close();
             return relatorioVendaClienteModel;
         }
-        
-        public List<ItensRelatorioVendaCliente> BuscarListaItensProduto(int idVenda)
+
+        public List<RelatorioVendaClienteModel> BuscarListaItensProduto(int idVenda)
         {
             try
             {
                 MySqlDataReader reader = null;
-                List<ItensRelatorioVendaCliente> itensRelatorioVendaCliente;
-                string cmdBuscarNomeFuncionario = @"";
+                List<RelatorioVendaClienteModel> itensRelatorioVendaCliente;
+                string cmdBuscarNomeFuncionario = @"
+                                                  SELECT 
+                                                  itnven.quantidade,
+                                                  itnven.valor_total,
+                                                  prod.nome,
+                                                  prod.marca,
+                                                  prod.tamanho,
+                                                  prod.codigo_barra
+                                                  FROM venda ven
+                                                  INNER JOIN itens_venda itnven
+                                                  ON itnven.id_venda = ven.id
+                                                  INNER JOIN produto prod
+                                                  ON prod.id = itnven.id_produto
+                                                  WHERE ven.id = @VENDA";
 
                 using (MySqlCommand cmd = new MySqlCommand(cmdBuscarNomeFuncionario, _con))
                 {
                     cmd.Prepare();
                     cmd.Parameters.AddWithValue("@VENDA", idVenda);
                     reader = cmd.ExecuteReader();
-                    itensRelatorioVendaCliente = new List<ItensRelatorioVendaCliente>();
+                    itensRelatorioVendaCliente = new List<RelatorioVendaClienteModel>();
                     if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
-                            ItensRelatorioVendaCliente _itensRelatorioVendaCliente = new ItensRelatorioVendaCliente();
-                            //_itensRelatorioVendaCliente.SetNome(reader.GetString("nome"));
-                            itensRelatorioVendaCliente.Add(_itensRelatorioVendaCliente);
+                            RelatorioVendaClienteModel _itensRelatorioVendaCliente = new RelatorioVendaClienteModel();
+                            _itensRelatorioVendaCliente.QuantidadeItem = reader.GetInt32("itnven.quantidade");
+                            _itensRelatorioVendaCliente.ValorTotalItem = reader.GetDouble("itnven.valor_total");
+                            _itensRelatorioVendaCliente.NomeProduto = reader.GetString("prod.nome");
+                            _itensRelatorioVendaCliente.MarcaProduto = reader.GetString("prod.marca");
+                            _itensRelatorioVendaCliente.TamanhoProduto = reader.GetString("prod.tamanho");
+                            _itensRelatorioVendaCliente.CodigoBarrasProduto = reader.GetString("prod.codigo_barra");
+                            itensRelatorioVendaCliente .Add(_itensRelatorioVendaCliente);
                         }
                     }
                     return itensRelatorioVendaCliente;

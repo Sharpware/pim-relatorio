@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RelatoriosSharpware.Model
 {
-    class RelatorioVendaClienteModel
+    public class RelatorioVendaClienteModel
     {
 
         private Int32 parametroIdVenda;
@@ -17,6 +17,13 @@ namespace RelatoriosSharpware.Model
         private Double valorVenda;
         private string tipoVenda;
         private string nomeFuncionario;
+        //Itens
+        private Int32 quantidadeItem;
+        private String codigoBarrasProduto;
+        private Double valorTotalItem;
+        private String nomeProduto;
+        private String marcaProduto;
+        private String tamanhoProduto;
 
         public String NomeCliente
         {
@@ -66,11 +73,40 @@ namespace RelatoriosSharpware.Model
             set { nomeFuncionario = value; }
         }
 
-        // Parametro para select .....
-        public Int32 ParametroIdVenda
+        //Itens
+        public Int32 QuantidadeItem
         {
-            get { return parametroIdVenda; }
-            set { parametroIdVenda = value; }
+            get { return quantidadeItem; }
+            set { quantidadeItem = value; }
+        }
+        public Double ValorTotalItem
+        {
+            get { return valorTotalItem; }
+            set { valorTotalItem = value; }
+        }
+
+        public String NomeProduto
+        {
+            get { return nomeProduto; }
+            set { nomeProduto = value; }
+        }
+
+        public String MarcaProduto
+        {
+            get { return marcaProduto; }
+            set { marcaProduto = value; }
+        }
+
+        public String TamanhoProduto
+        {
+            get { return tamanhoProduto; }
+            set { tamanhoProduto = value; }
+        }
+
+        public String CodigoBarrasProduto
+        {
+            get { return codigoBarrasProduto; }
+            set { codigoBarrasProduto = value; }
         }
     }
 }

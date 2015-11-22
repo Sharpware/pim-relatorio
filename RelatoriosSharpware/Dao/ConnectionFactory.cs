@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace RelatoriosSharpware.Dao
 {
-    class ConnectionFactory
+    public class ConnectionFactory
     {
         private ConnectionFactory()
         { }

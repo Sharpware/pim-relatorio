@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using RelatoriosSharpware.Controller;
 
 namespace RelatoriosSharpware
 {
@@ -18,8 +19,10 @@ namespace RelatoriosSharpware
 
         private void ExibirRelatorio_Load(object sender, EventArgs e)
         {
-
+            RelatorioVendaClienteController relatorio = new RelatorioVendaClienteController();
+            relatorio.BuscarVenda(16);
             this.reportViewer1.RefreshReport();
+
         }
     }
 }

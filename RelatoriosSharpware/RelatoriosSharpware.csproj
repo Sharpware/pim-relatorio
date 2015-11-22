@@ -57,7 +57,6 @@
     <Compile Include="Controller\RelatorioVendaClienteController.cs" />
     <Compile Include="Dao\ConnectionFactory.cs" />
     <Compile Include="Dao\RelatorioVendaClienteDao.cs" />
-    <Compile Include="Model\ItensRelatorioVendaCliente.cs" />
     <Compile Include="View\ExibirRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,13 +75,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\Relatorio.rdlc" />
     <EmbeddedResource Include="Report\RelatorioVendaCliente.rdlc" />
     <EmbeddedResource Include="Report\SubRelatorioItensVendaCliente.rdlc" />
     <EmbeddedResource Include="View\ExibirRelatorio.resx">
       <DependentUpon>ExibirRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="Properties\DataSources\RelatoriosSharpware.Dao.RelatorioVendaClienteDao.datasource" />
     <None Include="Properties\DataSources\RelatoriosSharpware.Model.RelatorioVendaClienteModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -97,6 +96,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

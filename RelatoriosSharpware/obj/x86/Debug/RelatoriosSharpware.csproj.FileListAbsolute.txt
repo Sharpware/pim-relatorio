@@ -8,3 +8,4 @@ C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\bin\
 C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\bin\Debug\RelatoriosSharpware.pdb
 C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RelatoriosSharpware.exe
 C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RelatoriosSharpware.pdb
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\bin\Debug\RelatoriosSharpware.exe.config

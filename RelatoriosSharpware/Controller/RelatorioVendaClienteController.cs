@@ -7,7 +7,7 @@ using RelatoriosSharpware.Model;
 
 namespace RelatoriosSharpware.Controller
 {
-    class RelatorioVendaClienteController
+    public class RelatorioVendaClienteController
     {
 
         RelatorioVendaClienteDao _relatorioVendaClienteDao;
