@@ -9,11 +9,17 @@ using System.Windows.Forms;
 
 namespace RelatoriosSharpware
 {
-    public partial class ExibirRelatorio : Form
+    public partial class ExibirRelatoriofrm : Form
     {
-        public ExibirRelatorio()
+        public ExibirRelatoriofrm()
         {
             InitializeComponent();
+        }
+
+        private void ExibirRelatorio_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

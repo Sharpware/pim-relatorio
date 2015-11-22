@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-
+using RelatoriosSharpware.Model;
 
 
 namespace RelatoriosSharpware.Dao
@@ -20,9 +18,9 @@ namespace RelatoriosSharpware.Dao
         {
             _con = con;
         }
-        public RelatorioVendaCliente relatorioVendaCliente;
+        public RelatorioVendaClienteModel relatorioVendaClienteModel;
 
-        public RelatorioVendaCliente BuscarVenda(int id)
+        public RelatorioVendaClienteModel BuscarVenda(int id)
         {
             MySqlDataReader reader = null;
             string cmdText = @"
@@ -49,10 +47,9 @@ namespace RelatoriosSharpware.Dao
                 reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    RelatorioVendaCliente relatorioVendaCliente;
                     while (reader.Read())
                     {
-                        RelatorioVendaCliente RelVenda = new RelatorioVendaCliente();
+                        RelatorioVendaClienteModel RelVenda = new RelatorioVendaClienteModel();
                         RelVenda.IdVenda = reader.GetInt32("vend.id");
                         RelVenda.DataVenda = reader.GetDateTime("vend.data_venda");
                         RelVenda.ValorVenda = reader.GetDouble("vend.valor_total");
@@ -61,16 +58,18 @@ namespace RelatoriosSharpware.Dao
                         RelVenda.EmailCliente = reader.GetString("cli.email");
                         RelVenda.CpfCliente = reader.GetString("cli.cpf");
                         RelVenda.NomeFuncionario = reader.GetString("fun.nome");
-                        relatorioVendaCliente = RelVenda;
+                        relatorioVendaClienteModel = RelVenda;
                     }
                 }
             }
             reader.Close();
-            return relatorioVendaCliente;
+            return relatorioVendaClienteModel;
         }
-
+        
         public void BuscarListaItensProduto(int idVenda)
         {
+
+
 
         }
 

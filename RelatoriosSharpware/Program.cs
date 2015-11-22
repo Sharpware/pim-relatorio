@@ -15,7 +15,7 @@ namespace RelatoriosSharpware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ExibirRelatorio());
+            Application.Run(new ExibirRelatoriofrm());
         }
     }
 }

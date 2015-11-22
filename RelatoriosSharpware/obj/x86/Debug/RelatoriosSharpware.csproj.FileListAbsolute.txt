@@ -1,0 +1,10 @@
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RelatoriosSharpware.csprojResolveAssemblyReference.cache
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RelatoriosSharpware.Properties.Resources.resources
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RelatoriosSharpware.ExibirRelatoriofrm.resources
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RelatoriosSharpware.csproj.GenerateResource.Cache
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RdlCompile.cache
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RdlCompile.compiled
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\bin\Debug\RelatoriosSharpware.exe
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\bin\Debug\RelatoriosSharpware.pdb
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RelatoriosSharpware.exe
+C:\Users\ATOM\Documents\Repositorio\RelatoriosSharpware\RelatoriosSharpware\obj\x86\Debug\RelatoriosSharpware.pdb
