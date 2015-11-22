@@ -14,8 +14,8 @@ namespace RelatoriosSharpware.Controller
 
         public RelatorioVendaClienteController()
         {
-           // var con = ConnectionFactory.GetConnection();
-         //   _relatorioVendaClienteDao = new RelatorioVendaClienteDao(con);
+            var con = ConnectionFactory.GetConnection();
+            _relatorioVendaClienteDao = new RelatorioVendaClienteDao(con);
         }
 
         public void BuscarVenda(int id)

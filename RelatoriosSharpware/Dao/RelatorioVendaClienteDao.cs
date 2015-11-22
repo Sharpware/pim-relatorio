@@ -9,7 +9,7 @@ using RelatoriosSharpware.Model;
 
 namespace RelatoriosSharpware.Dao
 {
-    class RelatorioVendaClienteDao
+    public class RelatorioVendaClienteDao
     {
 
         private MySqlConnection _con;
@@ -66,11 +66,36 @@ namespace RelatoriosSharpware.Dao
             return relatorioVendaClienteModel;
         }
         
-        public void BuscarListaItensProduto(int idVenda)
+        public List<ItensRelatorioVendaCliente> BuscarListaItensProduto(int idVenda)
         {
+            try
+            {
+                MySqlDataReader reader = null;
+                List<ItensRelatorioVendaCliente> itensRelatorioVendaCliente;
+                string cmdBuscarNomeFuncionario = @"";
 
-
-
+                using (MySqlCommand cmd = new MySqlCommand(cmdBuscarNomeFuncionario, _con))
+                {
+                    cmd.Prepare();
+                    cmd.Parameters.AddWithValue("@VENDA", idVenda);
+                    reader = cmd.ExecuteReader();
+                    itensRelatorioVendaCliente = new List<ItensRelatorioVendaCliente>();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            ItensRelatorioVendaCliente _itensRelatorioVendaCliente = new ItensRelatorioVendaCliente();
+                            //_itensRelatorioVendaCliente.SetNome(reader.GetString("nome"));
+                            itensRelatorioVendaCliente.Add(_itensRelatorioVendaCliente);
+                        }
+                    }
+                    return itensRelatorioVendaCliente;
+                }
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.ToString());
+            }
         }
 
     }
