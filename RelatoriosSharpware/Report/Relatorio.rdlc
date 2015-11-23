@@ -86,19 +86,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.13198in</Width>
+              <Width>1.59028in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.17175in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.06759in</Width>
+              <Width>0.80717in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.23425in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>0.81229in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.98425in</Width>
@@ -500,7 +500,7 @@
         <DataSetName>Relatorio</DataSetName>
         <Top>0.30903cm</Top>
         <Height>1.2cm</Height>
-        <Width>19.23814cm</Width>
+        <Width>16.76398cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -511,7 +511,7 @@
     <Height>0.77083in</Height>
     <Style />
   </Body>
-  <Width>19.23814cm</Width>
+  <Width>18.97356cm</Width>
   <Page>
     <PageHeader>
       <Height>3.75708cm</Height>
@@ -538,7 +538,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Height>1.02333cm</Height>
-          <Width>19.23814cm</Width>
+          <Width>18.7707cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -774,7 +774,7 @@
         <Line Name="Line1">
           <Top>3.56341cm</Top>
           <Height>0cm</Height>
-          <Width>19.11466cm</Width>
+          <Width>18.7707cm</Width>
           <ZIndex>8</ZIndex>
           <Style>
             <Border>
@@ -785,7 +785,7 @@
         <Line Name="Line2">
           <Top>1.36737cm</Top>
           <Height>0cm</Height>
-          <Width>19.11466cm</Width>
+          <Width>18.7707cm</Width>
           <ZIndex>9</ZIndex>
           <Style>
             <Border>

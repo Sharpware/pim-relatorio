@@ -57,6 +57,7 @@
     <Compile Include="Controller\RelatorioVendaClienteController.cs" />
     <Compile Include="Dao\ConnectionFactory.cs" />
     <Compile Include="Dao\RelatorioVendaClienteDao.cs" />
+    <Compile Include="Model\Parametro.cs" />
     <Compile Include="View\ExibirRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,8 +77,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Report\Relatorio.rdlc" />
-    <EmbeddedResource Include="Report\RelatorioVendaCliente.rdlc" />
-    <EmbeddedResource Include="Report\SubRelatorioItensVendaCliente.rdlc" />
     <EmbeddedResource Include="View\ExibirRelatorio.resx">
       <DependentUpon>ExibirRelatorio.cs</DependentUpon>
     </EmbeddedResource>

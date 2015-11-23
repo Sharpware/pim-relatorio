@@ -21,6 +21,7 @@ namespace RelatoriosSharpware
         {
             RelatorioVendaClienteController relatorio = new RelatorioVendaClienteController();
             relatorio.BuscarVenda(16);
+            reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
             this.reportViewer1.RefreshReport();
 
         }

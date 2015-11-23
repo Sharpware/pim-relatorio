@@ -35,9 +35,9 @@ namespace RelatoriosSharpware.Dao
                              fun.nome
                              FROM venda ven
                              INNER JOIN cliente cli 
-                             ON cli.id = ven.id_cliente
+                             ON cli.id = ven.cliente_id
                              INNER JOIN funcionario fun
-                             ON fun.id = ven.id_funcionario
+                             ON fun.id = ven.funcionario_id
                              WHERE ven.id = @VENDA";
 
             using (MySqlCommand cmd = new MySqlCommand(cmdText, _con))
@@ -83,9 +83,9 @@ namespace RelatoriosSharpware.Dao
                                                   prod.codigo_barra
                                                   FROM venda ven
                                                   INNER JOIN itens_venda itnven
-                                                  ON itnven.id_venda = ven.id
+                                                  ON itnven.venda_id = ven.id
                                                   INNER JOIN produto prod
-                                                  ON prod.id = itnven.id_produto
+                                                  ON prod.id = itnven.produto_id
                                                   WHERE ven.id = @VENDA";
 
                 using (MySqlCommand cmd = new MySqlCommand(cmdBuscarNomeFuncionario, _con))
