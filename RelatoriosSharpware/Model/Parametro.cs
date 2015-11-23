@@ -9,7 +9,7 @@ namespace RelatoriosSharpware.Model
     {
         private Int32 parametro;
 
-        public Int32 Parametro1
+        public Int32 ParametroVenda
         {
             get { return parametro; }
             set { parametro = value; }

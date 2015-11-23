@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using RelatoriosSharpware.Controller;
+using RelatoriosSharpware.Model;
 
 namespace RelatoriosSharpware
 {
@@ -16,11 +17,13 @@ namespace RelatoriosSharpware
         {
             InitializeComponent();
         }
+        Parametro parametro = new Parametro();
 
         private void ExibirRelatorio_Load(object sender, EventArgs e)
         {
+            
             RelatorioVendaClienteController relatorio = new RelatorioVendaClienteController();
-            relatorio.BuscarVenda(16);
+            relatorio.BuscarVenda(parametro.ParametroVenda);
             reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
             this.reportViewer1.RefreshReport();
 
